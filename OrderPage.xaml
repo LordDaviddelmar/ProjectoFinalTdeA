@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm1="clr-namespace:App1.ViewModel"
+             x:Class="App1.OrderPage">
+
+    <ContentPage.BindingContext>
+        <vm1:OrderViewModel x:Name="vm"/>
+    </ContentPage.BindingContext>
+
+
+    <ScrollView>
+        <StackLayout BackgroundColor="Red">
+            <Grid RowDefinitions="130, *">
+                <BoxView Grid.RowSpan="2">
+                    <BoxView.Background>
+                        <LinearGradientBrush>
+                            <GradientStopCollection>
+                                <GradientStop Color="red" Offset="0"/>
+                                <GradientStop Color="#30343F" Offset="1"/>
+                            </GradientStopCollection>
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+                <Grid>
+                    <Path Data="M0,0H375V262.033s-9.025,4.813-55.426-10.71-70.141-83.047-130.3-83.22-83.544,67.7-130.893,83.22S0,262.033,0,262.033Z" 
+                  Aspect="Fill" Fill="#FFBE00"/>
+                    <StackLayout Orientation="Horizontal" Margin="25" Spacing="20" VerticalOptions="Start">
+                        <SearchBar BackgroundColor="red" Placeholder="Busqueda" PlaceholderColor="White"/>
+                    </StackLayout>
+                </Grid>
+                <CarouselView Grid.Row="1" ItemsSource="{Binding MenuList}" PeekAreaInsets="80" Margin="0, -20, 0, 20" PositionChanged="CarouselPositionChanged">
+                    <CarouselView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
+                    </CarouselView.ItemsLayout>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid HeightRequest="520" WidthRequest="212" HorizontalOptions="Center">
+                                <Grid RowDefinitions="*,*,*" WidthRequest="175" HorizontalOptions="Center" Margin="0, 50">
+                                    <BoxView Grid.RowSpan="3" BackgroundColor="#FFBE00" CornerRadius="25"/>
+                                    <StackLayout Grid.Row="1" Padding="30" VerticalOptions="Center">
+                                        <Label Text="{Binding Title}" TextColor="Black" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding Description}" TextColor="Black" FontSize="14" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                    <StackLayout Grid.Row="2" Spacing="20" Padding="20" VerticalOptions="End">
+                                        <Label Text="{Binding Price}" TextColor="Black" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                        <Button x:Name="compra" Clicked="compra_Clicked" Text="Agregar" TextColor="White" BackgroundColor="#780000" WidthRequest="100" HeightRequest="40"
+                                        CornerRadius="20" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                </Grid>
+                                <Grid HeightRequest="210" WidthRequest="210" VerticalOptions="Start" HorizontalOptions="Center">
+                                    <Ellipse StrokeThickness="2" Aspect="Fill"/>
+                                    <Image x:Name="MenuImg" Source="{Binding Image}" HeightRequest="195" WidthRequest="195" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+            </Grid>
+
+
+
+
+
+
+
+            <Frame HeightRequest="190" BackgroundColor="#780000"  Margin="0" >
+
+                <StackLayout>
+                    <Label Text="Contactanos " HorizontalTextAlignment="Start" TextColor="white" FontSize="24" />
+                    <Grid>
+                        <Grid.RowDefinitions >
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Label Text="3004098699" HorizontalTextAlignment="Start" TextColor="white" FontSize="20" Grid.Row="0" />
+                        <Image Source="https://cdn-icons-png.flaticon.com/128/220/220236.png" HorizontalOptions="End" WidthRequest="34" Grid.Row="0"/>
+
+                        <Label Text="@fastfood_22 " HorizontalTextAlignment="Start" TextColor="white" FontSize="20" Grid.Row="1" />
+                        <Image Source="https://cdn-icons-png.flaticon.com/128/174/174855.png" HorizontalOptions="End" WidthRequest="34" Grid.Row="1"/>
+                    </Grid>
+
+
+
+                    <Label Text="***Wir haben viele dingen gelernt uber unsere menschen." TextColor="white" FontSize="13"/>
+                    <Label Text="**Wir sind schneller als bevor." TextColor="white" FontSize="13"/>
+                    <Label Text="*Wir haben genug gewartet" TextColor="white" FontSize="13"/>
+
+
+
+                </StackLayout>
+
+
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           x:Class="App1.Pageregi">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="#e6e6e6">
+
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Style x:Key="boton" TargetType="Button">
+
+                            <Setter Property="BackgroundColor" Value="#FFBE00"/>
+                            <Setter Property="TextColor" Value="White"/>
+                            <Setter Property="CornerRadius" Value="23"/>
+                            <Setter Property="HorizontalOptions" Value="Center"/>
+                        </Style>
+                    </ResourceDictionary>
+
+                </StackLayout.Resources>
+
+
+                <Grid>
+                    <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+                        <Frame HeightRequest="150" BackgroundColor="Red" Padding="0" Margin="0">
+                            <Image Source="https://i.pinimg.com/236x/56/75/53/56755394a96a7288a3fb698b541a9190.jpg" Aspect="AspectFill" Margin="0"/>
+                        </Frame>
+                    </StackLayout>
+
+
+
+
+
+
+                    <StackLayout Padding="0" Margin="10,100,10,0" HorizontalOptions="FillAndExpand">
+                        <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
+
+                            <StackLayout>
+
+
+                                <StackLayout Margin="10">
+                                    <Label Text="Registrarse" TextColor="Black" FontSize="24" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+
+                                </StackLayout>
+
+
+
+
+
+
+
+
+                                <StackLayout Padding="0" Margin="15,10">
+
+                                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                                <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                                            </Frame>
+
+                                            <Entry Placeholder="Usuario" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        </StackLayout>
+                                    </Frame>
+
+
+
+
+
+                                    <StackLayout >
+
+                                        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                                    <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                                                </Frame>
+
+                                                <Entry Placeholder="Correo Electronico" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                            </StackLayout>
+                                        </Frame>
+
+                                    </StackLayout>
+
+
+
+
+
+                                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray"  Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                                <Image Source="https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg" Aspect="AspectFill" Margin="0"/>
+                                            </Frame>
+
+                                            <Entry Placeholder="Contraseña" IsPassword="True" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        </StackLayout>
+                                    </Frame>
+
+
+
+
+
+
+
+
+
+
+                                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray"  Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                                <Image Source="https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg" Aspect="AspectFill" Margin="0"/>
+                                            </Frame>
+
+                                            <Entry Placeholder="Confirmar Contraseña" IsPassword="True" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        </StackLayout>
+                                    </Frame>
+
+
+
+
+
+
+
+                                    <Label Text="Fecha de nacimiento" TextColor="Black" FontSize="20" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+
+                                    <DatePicker />
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <Button Text="Registrarse" Style="{StaticResource boton}" />
+
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                                    </StackLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </StackLayout>
+
+
+                            </StackLayout>
+
+                        </Frame>
+
+
+
+
+                    </StackLayout>
+
+
+
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
